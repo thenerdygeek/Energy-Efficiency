@@ -46,11 +46,16 @@ try:
     # response = urllib.request.urlopen(req)
 
     result = response.read()
-    print(result) 
+    data = json.loads(result)
+    print '\nHeating Load: ' + data['Results']['output1']['value']['Values'][0][8]
+    print '\nCooling Load: ' + data['Results']['output1']['value']['Values'][0][17]
+
+    #print(type(result))
+    #print(result)
 except urllib2.HTTPError, error:
     print("The request failed with status code: " + str(error.code))
 
     # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
     print(error.info())
 
-    print(json.loads(error.read()))                 
+    print(json.loads(error.read()))
