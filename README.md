@@ -8,7 +8,7 @@ The following <a href="https://archive.ics.uci.edu/ml/machine-learning-databases
 
 ### For Ubuntu
 
-* Check whether python 2 is installed or not </br>
+* Check whether python is installed or not </br>
   `python --version`
 
     If it is not installed then download and install it from [here](https://www.python.org/downloads/)
