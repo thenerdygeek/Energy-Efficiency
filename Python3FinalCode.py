@@ -1,5 +1,6 @@
+#!/usr/bin/python3
 import urllib.request
-# If you are using Python 3+, import urllib instead of urllib2
+# If you are using Python 2+, import urllib2 instead of urllib
 
 import json
 
@@ -47,8 +48,8 @@ try:
 
     result = response.read()
     data = json.loads(result)
-    print('\nHeating Load: ' , data['Results']['output1']['value']['Values'][0][8])
-    print('\nCooling Load: ' , data['Results']['output1']['value']['Values'][0][17])
+    print('\nHeating Load: ', data['Results']['output1']['value']['Values'][0][8])
+    print('\nCooling Load: ', data['Results']['output1']['value']['Values'][0][17])
 
     #print(type(result))
     #print(result)
