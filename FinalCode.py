@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import urllib.request
+import api_key
 # If you are using Python 2+, import urllib2 instead of urllib
 
 import json
@@ -34,7 +35,7 @@ data["Inputs"]["input1"]=data["Inputs"]["input2"]
 body = str.encode(json.dumps(data))
 
 url = 'https://ussouthcentral.services.azureml.net/workspaces/d40075692ae645bf8c9108f6167c6b90/services/4f7e2a5c09b74bbd9a687cf3c6c8ab53/execute?api-version=2.0&details=true'
-api_key = 'e+u07brLqtluLi3UGnEEkHUhUzmspkKHl860TTLF2/Jp9BrAriGsjVcqJPzuXKb47qDKEHYdSZGtZFR8f1anIw=='
+api_key = api_key.api_key
 headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
 req = urllib.request.Request(url, body, headers) 
